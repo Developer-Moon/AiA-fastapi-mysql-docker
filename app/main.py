@@ -21,7 +21,7 @@ def main() :
             break
         
         elif menu == '1':
-            calculatorService = CalculatorService() 
+            calculatorService = CalculatorService() 123
             first = int(input('첫번째 값 : '))
             second = int(input('두번째 값 : '))
             calculatorService.calculate(first, second) 
