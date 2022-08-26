@@ -5,7 +5,7 @@ class CalculatorService(object) : # Calculator가 없으면 CalculatorService가
                                                    
         pass
     
-    def calculate(self, first, second) :
+    def calculate(self, first, second) : # 파라미터
         calculator = Calculator(first, second)
         print(f'첫번째수: {calculator.first}')
         print(f'두번째수: {calculator.second}')
