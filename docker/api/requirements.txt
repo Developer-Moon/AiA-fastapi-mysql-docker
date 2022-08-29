@@ -1,0 +1,6 @@
+# pip install 같은거
+mysqlclient
+sqlalchemy
+uvicorn
+fastapi
+pymysql

@@ -58,8 +58,13 @@ def main() :                                           # main()
                 elif quiz_number == '3' :
                     quiz.quiz_03()
                 elif quiz_number == '4' :
-                    quiz.quiz_04()
-                    
+                    quiz.quiz_04() 
+                elif quiz_number == '5' :
+                    quiz.quiz_05()
+                elif quiz_number == '6' :
+                    quiz.quiz_06()  
+                elif quiz_number == '7' :
+                    quiz.quiz_07()   
         
             
             

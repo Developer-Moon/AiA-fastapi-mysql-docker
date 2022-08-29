@@ -1,5 +1,28 @@
 from app.models.grade import Grade
 
+class GradeService(object):
+    
+    def __init__(self):
+        self.avg = 0.0
+        
+    def set_avg(self):
+        pass
+    
+    def get_avg(self):
+        pass
+    
+    def set_grade(self):
+        pass
+    
+    def get_grade(self):
+        pass
+    
+    
+
+
+'''
+from app.models.grade import Grade
+
 
 class GradeService(object) :
     def __init__(self) -> None:
@@ -29,3 +52,4 @@ class GradeService(object) :
         self.set_grade(name, korean, english, math) # 아규먼츠
         return self.credit                                # 식은 set에서  return 은 get에서
     
+'''
