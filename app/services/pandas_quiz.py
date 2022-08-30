@@ -1,18 +1,8 @@
-from calendar import c
-import pandas as pd # 라이브러리고 pandas는 파일 그 안에 pd
-import random
 from icecream import ic
+import pandas as pd
 import numpy as np
+import random
 import string
-
-
-        
-    
-
-
-
-               
-
 # 스칼라량은 단지 하나의 크기량
 # 백터량은 방향과 크기를 동시에 나타내는 표현도구
 
@@ -21,15 +11,15 @@ class PandasQuiz(object) :
     def __init__(self) -> None :
         pass
     
-##############################################################################################################  
-# Q1. 다음 결과 출력
-#        a  b  c
-#     1  1  3  5
-#     2  2  4  6
-#     ic| df1:    a  b  c    열로 뽑으면 딕셔너리 
-#              1  1  3  5    행으로 뽑으면 리스트 
-#              2  2  4  6
-
+    '''
+    Q1. 다음 결과 출력
+        a  b  c
+        1  1  3  5
+        2  2  4  6
+        ic| df1:    a  b  c    열로 뽑으면 딕셔너리 
+                1  1  3  5    행으로 뽑으면 리스트 
+                2  2  4  6
+    '''
     def quiz_01(self) : # 딕셔너리
         df = pd.DataFrame.from_dict({'1' : [1, 3, 5], '2' : [2, 4, 6]},  # 1, 3, 5를 [1, 3, 5] - 스칼라를 묶어서 다시 스칼라화
                                     orient='index',                      # 전체를 {}로 묶어서 엘리먼트로 전환
@@ -37,18 +27,19 @@ class PandasQuiz(object) :
         ic(df)                                                           # orient='index -> 방향으로 해달라
         
 
-############################################################################################################## 
-# Q2. 다음 결과 출력
-#    A   B   C
-# 1   1   2   3
-# 2   4   5   6
-# 3   7   8   9
-# 4  10  11  12
-# ic| df2:     A   B   C
-#          1   1   2   3
-#          2   4   5   6
-#          3   7   8   9
-#          4  10  11  12
+    '''
+    Q2. 다음 결과 출력
+    A   B   C
+    1   1   2   3
+    2   4   5   6
+    3   7   8   9
+    4  10  11  12
+    ic| df2:     A   B   C
+            1   1   2   3
+            2   4   5   6
+            3   7   8   9
+            4  10  11  12
+    '''         
     def quiz_02(self) : 
         df = pd.DataFrame.from_dict({'1' : [1, 2, 3], '2' : ['4', '5', '6'], '3' : ['7', '8', '9'], '4' : ['10', '11', '12']},
                                     orient='index',
@@ -138,8 +129,31 @@ class PandasQuiz(object) :
     
     
         
-
+#   def quiz_07(self):
+#         df = self.get_df()
+#         df['과학'] = random.sample(range(0, 101), 10)
+#         df['총점'] = df.sum(axis=1)
+#         tmpdf = pd.DataFrame.from_dict({'과목총점':df.sum(axis=0)}, orient='index', columns=['국어', '영어', '수학', '사회', '과학', '총점'])
+#         df = pd.concat([df, tmpdf], axis=0)
+    
+#         ic(df)
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 오버로딩   - 덮어쓰기  "".join 지역변수를 제거했다[속도가 빨라진다]
 # 오버라이드 - ???????        
