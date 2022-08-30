@@ -4,7 +4,6 @@ sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 basedir = os.path.dirname(os.path.abspath(__file__))
 from app.api.endpoints.url import Url
 from app.constants.menus import LOGIN, LOGOUT, CALCULATOR, GRADE, QUIZ_1, QUIZ_2, QUIZ_3, QUIZ_4, QUIZ_5, DDARUNG
-from app.services.pandas_quiz import PandasQuiz
 
 def print_menu():
     print(' ###################')

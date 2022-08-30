@@ -6,8 +6,9 @@ from app.services.ddarung import DDarungService
 from app.services.titanic import TitanicService
 from app.constants.menus import LOGIN, LOGOUT, CALCULATOR, GRADE, \
     QUIZ_1, QUIZ_2, QUIZ_3, QUIZ_4, QUIZ_5, QUIZ_6, QUIZ_7, DDARUNG, TITANIC
-class Url:
     
+    
+class Url:
     def router(self, menu):
         if menu == LOGIN:
             UserService().login(
@@ -23,7 +24,7 @@ class Url:
             english = int(input('영어'))
             math = int(input('수학'))
             print(f'이름: {name} \
-                학점: {GradeService().get_grade(name,korean, english, math)}')
+                학점: {GradeService().get_grade(name, korean, english, math)}')
         elif menu == DDARUNG: DDarungService().submit(
             path='data/ddarung/', train='train.csv', test='test.csv'
         )
@@ -39,4 +40,7 @@ class Url:
         elif menu == QUIZ_5: Quiz().quiz_5()
         elif menu == QUIZ_6: Quiz().quiz_6()
         elif menu == QUIZ_7: Quiz().quiz_7()
+        
+        
+
             

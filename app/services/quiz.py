@@ -87,7 +87,7 @@ class Quiz(object):
         ic()
         
         
-    
+
     
     ''' 
     Q5 원하는 과목 점수만 출력하시오. (만약 국어라고 입력하면 아래와 같이 출력됨)
@@ -138,8 +138,9 @@ class Quiz(object):
         df = self.df()
         df['과학'] = random.sample(range(0, 101), 10)
         df['총점'] = df.sum(axis=1)
-        df = pd.concat([df, df.sum()])
+        df.loc['과목총점'] = df.sum(axis=0)
         ic(df)
+        
        
        
     

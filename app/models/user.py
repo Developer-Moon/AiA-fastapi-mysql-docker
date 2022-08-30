@@ -8,3 +8,5 @@ class User(object) :
     
     def input_password(self) :
         return self.password
+
+
