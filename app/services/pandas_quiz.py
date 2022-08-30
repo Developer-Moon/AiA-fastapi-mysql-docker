@@ -118,9 +118,9 @@ class PandasQuiz(object) :
 #                 jHChe   59   37   80   27   39   242
 #                 과목총점   547  536  533  319  376  2311
     def quiz_07(self) :
-        self.df().append(columns=['과학', '총점'])
+        self.df()['과학'] = np.random.randint(0, 101, (10, 1))
         # self.score().append()
-        print(self.df())
+        ic(self.df())
         
 
     

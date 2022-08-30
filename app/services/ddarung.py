@@ -22,5 +22,7 @@ class DDarungService :
     
     def submit(self, path, train, test) :
         this = self.preprocess(path, train, test)
+        Context.show_spec(this.train)
         print('### DF ### 구조보기')
         print(this.train.head())
+        
